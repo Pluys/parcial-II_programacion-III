@@ -1,0 +1,35 @@
+:root {
+  --color-white: #e0e0e0;
+  --color-black: #121212;
+
+  --color-background: #242424;
+  --color-foreground: #484848;
+
+  --color-primary: #857eff;
+  --color-secondary: #abff7e;
+}
+
+* {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+
+  color: var(--color-white);
+  transition: all 0.25s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-background);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
