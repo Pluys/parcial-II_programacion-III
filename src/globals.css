@@ -1,33 +1,44 @@
+@import url(./keyframes.css);
 :root {
+  /* colors */
   --color-white: #e0e0e0;
   --color-black: #121212;
 
   --color-background: #242424;
-  --color-foreground: #484848;
+  --color-foreground: #363636;
+
+  --color-text-highlight: #ffcd44;
+  --color-text-low: #6d6d6e;
 
   --color-primary: #857eff;
   --color-secondary: #abff7e;
+
+  /* miscellaneous */
+  --padding-common: 10px;
+  --margin-common: 10px;
 }
 
 * {
+  margin: 0;
+  padding: 0;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.4;
-
-  color: var(--color-white);
-  transition: all 0.25s ease;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  color: var(--color-white);
   background-color: var(--color-background);
+}
+
+main {
+  padding: var(--padding-common) 5dvw;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
 }
 
 a {

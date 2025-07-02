@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h2 {
+    text-shadow: 0 0 5px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding: 0 0 0 30px;
+  }
+
+  section {
+    padding: var(--padding-common);
+
+    background-color: var(--color-foreground);
+
+    border-radius: 10px;
+
+    article {
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

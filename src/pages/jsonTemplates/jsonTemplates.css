@@ -1,0 +1,14 @@
+main {
+  #templates {
+    margin: 0 2.5dvw;
+    padding: var(--padding-common);
+
+    background-color: var(--color-foreground);
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px 6px var(--color-black);
+  }
+}

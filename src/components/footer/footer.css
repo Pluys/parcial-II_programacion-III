@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  padding: var(--padding-common) 0;
+
+  color: var(--color-text-low);
+  background-color: var(--color-foreground);
+
+  p {
+    padding: 0 15px;
+  }
+
+  address {
+    color: var(--color-white);
+    padding: 0 15px;
+    text-align: center;
+
+    a {
+      color: var(--color-text-highlight);
+    }
+  }
+}
