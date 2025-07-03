@@ -28,13 +28,25 @@
 }
 
 body {
+  min-height: 100dvh;
   box-sizing: border-box;
   color: var(--color-white);
   background-color: var(--color-background);
+
+  #app {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 main {
   padding: var(--padding-common) 5dvw;
+}
+
+#main:first-of-type h2 {
+  text-shadow: 0 0 5px;
 }
 
 ul {

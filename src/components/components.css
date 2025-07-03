@@ -2,6 +2,8 @@
   opacity: 0.66;
 }
 
+/* meant for a component that I desintegrated due to it not working
+the way I expected. The only scrapped thing from the entire thing. */
 .dataTypePopup {
   width: 80dvw;
   height: fit-content;
@@ -14,14 +16,11 @@
   border-radius: 11px;
 
   position: fixed;
-  display: flex;
+  display: none;
   justify-self: center;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-
-  transition: 0.99s ease-in-out;
-  translate: 100dvw 0;
 }
 
 .primaryButton {
@@ -58,7 +57,65 @@
   transition: scale 0.1s;
 }
 
+.saveButton {
+  width: fit-content;
+  margin: 0 auto;
+  padding: var(--padding-common);
+
+  color: var(--color-white);
+  background-color: #ff5757;
+
+  border: 3px solid var(--color-white);
+  border-radius: 10px;
+
+  transition: scale 0.1s;
+}
+
 .primaryButton:active,
-.secondaryButton:active {
+.secondaryButton:active,
+.saveButton:active {
   scale: 0.9;
+}
+
+.whiteLine {
+  width: 80%;
+  height: 7px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  margin: 0 auto;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: loaderRotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--color-secondary);
+  width: 6px;
+  height: 6px;
+  transform: translate(150%, 150%);
+  border-radius: 50%;
+}
+
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  transform: translate(-150%, -150%);
 }

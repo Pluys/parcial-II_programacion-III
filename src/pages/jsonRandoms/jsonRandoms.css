@@ -1,4 +1,7 @@
-main {
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   h2 {
     text-shadow: 0 0 5px;
   }
@@ -23,6 +26,7 @@ main {
     border: 3px solid var(--color-white);
     border-radius: 10px;
     word-wrap: break-word;
+    word-break: break-all;
   }
 
   .posts em {
@@ -43,5 +47,16 @@ main {
 
   .users em {
     text-shadow: 0 0 3px var(--color-white);
+  }
+}
+
+@media (width > 400px) {
+  #main {
+    #buttonsContainer {
+      display: flex;
+      .primaryButton {
+        width: 33%;
+      }
+    }
   }
 }

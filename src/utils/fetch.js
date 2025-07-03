@@ -42,6 +42,9 @@ allData.push(getAllTodos);
 allData.push(getAllUsers);
 
 export function getRandomJson(indexTYPES) {
+  document.getElementById(
+    "jsonRandom"
+  ).innerHTML = `<span class="loader"></span>`;
   //If indexTYPES was not proportionated,
   //the function returns  a random index.
   const datatype =

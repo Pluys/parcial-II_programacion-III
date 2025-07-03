@@ -1,4 +1,10 @@
+import { CreateCards } from "./utils/createCards";
+import { CreateSearch } from "./utils/createSearch";
 import { allData, TYPES, getRandomJson } from "./utils/fetch";
+import {
+  addJsonLocalStorage,
+  removeJsonLocalStorage,
+} from "./utils/localStorage";
 
 //Functionality of the components shared by all pages.
 export function HydrationMain() {
@@ -20,38 +26,17 @@ export function HydrationMain() {
 
 //Functionality of the components located in jsonTemplates.
 export function HydrationJsonTemplates() {
-  const sectionEl = document.getElementById("templates");
-  const buttonDataTypeEl = document.querySelector("button");
-  const popupEl = document.querySelector("dialog");
+  const dataFiltersEl = document.getElementById("dataFilters");
+  for (let i = 3; i < dataFiltersEl.childNodes.length - 4; i += 2) {
+    const btnEl = dataFiltersEl.childNodes[i];
 
-  sectionEl.appendChild();
-  //Makes the popup visible on screen.
-  //(ref: components/components.css/".dataTypePopup")
-  buttonDataTypeEl.addEventListener("click", () => {
-    popupEl.style.translate = "0";
-  });
-
-  for (let i = 3; i < popupEl.childNodes.length; i += 2) {
-    const btnEl = popupEl.childNodes[i];
-
-    //Makes every button move the popup offscreen.
-    //(ref: components/components.css/".dataTypePopup")
     btnEl.addEventListener("click", () => {
-      popupEl.style.translate = "100dvw 0";
-
-      allData[i - i / 2 - 1.5]().then(console.log);
+      allData[i - i / 2 - 1.5]().then((data) => {
+        CreateSearch(data[0], Object.values(TYPES)[i - i / 2 - 1.5]);
+        CreateCards(data);
+      });
     });
   }
-  //Do something about this god fucking dammit.
-  // popupEl.childNodes[3].addEventListener("click", () => {});
-
-  // popupEl.childNodes[5].addEventListener("click", () => {});
-
-  // popupEl.childNodes[7].addEventListener("click", () => {});
-
-  // popupEl.childNodes[9].addEventListener("click", () => {});
-
-  // popupEl.childNodes[11].addEventListener("click", () => {});
 }
 
 //Functionality of the components located in the jsonRandoms page.
@@ -79,4 +64,27 @@ export function HydrationJsonRandoms() {
     cardEl.innerHTML = "The JSON will be displayed here!";
     cardEl.className = "";
   });
+
+  document.querySelector(".saveButton").addEventListener("click", () => {
+    if (cardEl.innerText === "The JSON will be displayed here!") {
+      return;
+    }
+    addJsonLocalStorage(cardEl.innerHTML);
+  });
+}
+
+export function HydrationJsonSaves() {
+  const savedDataEl = document.getElementById("savedData");
+  const children = [];
+
+  for (let i = 0; i < savedDataEl.childNodes.length; i++) {
+    children.push(savedDataEl.childNodes[i]);
+  }
+
+  for (let i = 1; i < children.length - 1; i++) {
+    children[i].addEventListener("dblclick", () => {
+      children[i].remove();
+      removeJsonLocalStorage();
+    });
+  }
 }

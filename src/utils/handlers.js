@@ -35,3 +35,23 @@ export function objectHandler(iObject) {
 
   return iObject;
 }
+
+//Checks if the strSearch string is a part of the data strign.
+//returns a boolean.
+export function stringCopyHandler(strSearch, data) {
+  let letterIndex = 0;
+
+  for (let i = 0; i < data.length && letterIndex < strSearch.length; i++) {
+    if (data[i] == strSearch[letterIndex]) {
+      letterIndex++;
+    } else {
+      letterIndex = 0;
+    }
+  }
+
+  if (letterIndex < strSearch.length) {
+    return false;
+  } else {
+    return true;
+  }
+}

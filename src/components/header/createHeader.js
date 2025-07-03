@@ -19,6 +19,7 @@ export default function CreateHeader() {
             <li ><a href="/src/index.html">Home</a></li>
             <li><a href="/src/pages/jsonTemplates/jsonTemplates.html">JSON Requests</a></li>
             <li><a href="/src/pages/jsonRandoms/jsonRandoms.html">JSON Random</a></li>
+            <li><a href="/src/pages/jsonSaves/jsonSaves.html">JSONs Saved</a></li>
         </ul>
         </nav>
     `;
