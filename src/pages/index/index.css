@@ -12,6 +12,10 @@ main {
     padding: 0 0 0 30px;
   }
 
+  a {
+    margin: 0 auto;
+  }
+
   section {
     padding: var(--padding-common);
 

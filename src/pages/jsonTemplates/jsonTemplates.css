@@ -11,4 +11,37 @@ main {
     justify-content: center;
     box-shadow: 0 0 10px 6px var(--color-black);
   }
+
+  #jsonRandom {
+    max-width: 100%;
+    height: fit-content;
+    margin: 20px;
+    padding: var(--padding-common);
+
+    color: var(--color-white);
+    background-color: #7e7e7e;
+
+    border: 3px solid var(--color-white);
+    border-radius: 10px;
+    word-wrap: break-word;
+  }
+
+  .comments em {
+    text-shadow: 0 0 3px var(--color-text-highlight);
+  }
+  .photos em {
+    text-shadow: 0 0 3px var(--color-secondary);
+  }
+
+  .albums em {
+    text-shadow: 0 0 12px var(--color-black);
+  }
+
+  .todos em {
+    text-shadow: 0 0 3px var(--color-primary);
+  }
+
+  .users em {
+    text-shadow: 0 0 3px var(--color-white);
+  }
 }

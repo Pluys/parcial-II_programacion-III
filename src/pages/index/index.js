@@ -33,13 +33,13 @@ ${CreateHeader()}
     <h3>In this page, you can:</h3>
     <ul>
         <li>Request every data type available in JSONPlaceholder API</li>
-        <li>Use filters given by the JSONPlaceholder API</li>
-        <li>Get a randomized request from JSONPlaceholder</li>
+        <li>Apply filters to said requests</li>
+        <li>Get randomized requests made to JSONPlaceholder</li>
         <li>Save requests that you made!</li>
     </ul>
     <section>
         <article>
-            <h3>If you want, you can support the developer of JSONPlaceholder API here:</h3>
+            <h3>Support the developer of JSONPlaceholder API here:</h3>
             <a href="https://github.com/sponsors/typicode">
                 <img src=${githubLogo} alt="typicode's github" />
             </a>

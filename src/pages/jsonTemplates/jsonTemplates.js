@@ -4,16 +4,9 @@ import "../../components/components.css";
 
 import CreateFooter from "../../components/footer/createFooter";
 import CreateHeader from "../../components/header/CreateHeader";
-import { HydrationMain, HydrationFooter } from "../../main";
-import {
-  CreateCards,
-  getAllAlbums,
-  getAllComments,
-  getAllPhotos,
-  getAllTodos,
-  getAllUsers,
-  TYPES,
-} from "../../utils/fetch";
+import { HydrationMain, HydrationJsonTemplates } from "../../main";
+import { allData, TYPES } from "../../utils/fetch";
+import { toUpperCaseFirst } from "../../utils/toUpperCaseFirst";
 
 const app = document.getElementById("app");
 
@@ -26,17 +19,26 @@ ${CreateHeader()}
   </select>
   <dialog class="dataTypePopup">
   <h2>Choose a data type!</h2>
-  <button class="secondaryButton">Users</button>
-  <button class="secondaryButton">To do(s)</button>
-  <button class="secondaryButton">Albums</button>
-  <button class="secondaryButton">Photos</button>
-  <button class="secondaryButton">Comments</button>
-  </dialog>
+  ${Object.values(TYPES)
+    .map(
+      (type) =>
+        `
+        <button class="secondaryButton">
+          ${toUpperCaseFirst(type)}
+        </button>
+      `
+    )
+    .join("")}
+    </dialog>
   </section>
   </main>
 ${CreateFooter()}
 `;
+/*
+The join up there is the only thing
+that idk why makes something work.
+in this case, the thing being the ".map".
+*/
 
 HydrationMain();
-HydrationFooter();
-// getAllComments().then(CreateCards);
+HydrationJsonTemplates();
