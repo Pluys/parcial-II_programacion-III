@@ -3,7 +3,7 @@ import "../../globals.css";
 import "../../components/components.css";
 
 import CreateFooter from "../../components/footer/createFooter";
-import CreateHeader from "../../components/header/CreateHeader";
+import CreateHeader from "../../components/header/createHeader";
 import { HydrationMain, HydrationJsonTemplates } from "../../main";
 import { TYPES } from "../../utils/fetch";
 import { toUpperCaseFirst } from "../../utils/toUpperCaseFirst";
@@ -21,7 +21,7 @@ ${CreateHeader()}
     <br>
     It's quite simple: The searchbar will try to find exactly what
     you inserted into every object of the fetch that you made.
-    You can search keys,values, or anything in particular, really!
+    You can search keys, values, or anything in particular, really! (example: "_id: 500". The space is also important!)
     <br>
     And if you run out of search results, you can always fetch more
     data without worries!

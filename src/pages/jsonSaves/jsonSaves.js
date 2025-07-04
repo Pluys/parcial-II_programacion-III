@@ -3,7 +3,7 @@ import "../../globals.css";
 import "../../components/components.css";
 
 import CreateFooter from "../../components/footer/createFooter";
-import CreateHeader from "../../components/header/CreateHeader";
+import CreateHeader from "../../components/header/createHeader";
 import { HydrationJsonSaves, HydrationMain } from "../../main";
 import { getJsonLocalStorage } from "../../utils/localStorage";
 
@@ -26,7 +26,7 @@ ${CreateHeader()}
         For reference, they will look like this!
         <br>
         doubletapping in any part of the box will cause it to be
-        removed from your saves, but you can always look for them
+        removed from your saves (Yes, this one too), but you can always look for them
         in the API again!
     </div>
         ${getJsonLocalStorage()}

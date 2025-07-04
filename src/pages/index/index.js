@@ -3,7 +3,7 @@ import "../../globals.css";
 import "../../components/components.css";
 
 import CreateFooter from "../../components/footer/createFooter";
-import CreateHeader from "../../components/header/CreateHeader";
+import CreateHeader from "../../components/header/createHeader";
 import { HydrationMain } from "../../main";
 
 import githubLogo from "../../assets/githubLogo.png";
@@ -23,11 +23,11 @@ ${CreateHeader()}
         research and educational purposes, so you can also know what
         happens behind the scenes!
     </p>
-    <a href="./pages/jsonTemplates/jsonTemplates.html">
+    <a href="/src/pages/jsonTemplates/jsonTemplates.html">
         <button class="primaryButton">Do requests!</button>
     </a>
 
-    <a href="./pages/jsonRandoms/jsonRandoms.html">
+    <a href="/src/pages/jsonRandoms/jsonRandoms.html">
         <button class="primaryButton">Get a random json!</button>
     </a>
     <h3>In this page, you can:</h3>

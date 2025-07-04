@@ -9,8 +9,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        //Yo miré la documentación, pero no tuve suerte lastimosamente.
-        //Puede ser porque vengo estando despierto dos dias seguidos con esto
+        random: resolve(__dirname, "./src/pages/jsonRandoms/jsonRandoms.html"),
+        templates: resolve(
+          __dirname,
+          "./src/pages/jsonTemplates/jsonTemplates.html"
+        ),
+        saves: resolve(__dirname, "./src/pages/jsonSaves/jsonSaves.html"),
       },
     },
   },

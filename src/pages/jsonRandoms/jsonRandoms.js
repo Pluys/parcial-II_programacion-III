@@ -3,7 +3,7 @@ import "../../globals.css";
 import "../../components/components.css";
 
 import CreateFooter from "../../components/footer/createFooter";
-import CreateHeader from "../../components/header/CreateHeader";
+import CreateHeader from "../../components/header/createHeader";
 import { HydrationJsonRandoms, HydrationMain } from "../../main";
 import { TYPES } from "../../utils/fetch";
 import { toUpperCaseFirst } from "../../utils/toUpperCaseFirst";
