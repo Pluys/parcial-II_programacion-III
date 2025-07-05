@@ -21,14 +21,14 @@ ${CreateHeader()}
         Remember that all of the JSONs are saved locally on your
         computer, so try to not get too excited trying to break it!
     </p>
-    <section id="savedData">
-    <div>
+    <div id="referenceCard">
         For reference, they will look like this!
         <br>
         doubletapping in any part of the box will cause it to be
-        removed from your saves (Yes, this one too), but you can always look for them
+        removed from your saves, but you can always look for them
         in the API again!
     </div>
+    <section id="savedData">
         ${getJsonLocalStorage()}
     </section>
 </main>

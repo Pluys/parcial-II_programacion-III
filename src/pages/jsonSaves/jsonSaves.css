@@ -1,4 +1,15 @@
 #main {
+  #referenceCard {
+    width: fit-content;
+    height: fit-content;
+    padding: var(--padding-common);
+    margin: calc(var(--margin-common) * 2) var(--margin-common);
+
+    line-break: anywhere;
+    background-color: var(--color-foreground);
+
+    border-radius: 10px;
+  }
   #savedData {
     div {
       width: fit-content;
